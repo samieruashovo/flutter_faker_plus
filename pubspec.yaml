@@ -2,6 +2,7 @@ name: flutter_faker_plus
 description: A comprehensive fake data generator for Flutter/Dart applications, created from scratch. Generate random data for user profiles, e-commerce products, and geolocations, with plans for more features like image URLs and fake QR code generation.
 version: 0.0.1
 homepage: https://pub.dev/packages/flutter_faker_plus
+repository: https://github.com/samieruashovo/flutter_faker_plus
 
 environment:
   sdk: ^3.6.0
