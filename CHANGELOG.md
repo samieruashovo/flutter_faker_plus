@@ -1,8 +1,12 @@
-## 0.0.1
+## 1.0.0
 
-* Initial release of `flutter_faker_plus`.
-* Features include:
-  - Generate random user profiles with name, email, phone number, address, date of birth, gender, profile picture URL, and bio.
-  - Generate random e-commerce product details, including name, price, and category.
-  - Generate random geolocation coordinates (latitude and longitude).
-* Framework built with flexibility for future expansions, including image URLs for e-commerce products, more fake data types, and fake QR code generation.
+### New Features
+- **Custom Data Generators**: Added the ability to generate custom data for users, products, and locations.
+- **Advanced Geolocation**:
+  - Generate geolocation coordinates with reverse geocoding to include city, state, and country names.
+  - Added distance calculations between two locations.
+
+### Improvements
+- Improved performance and reduced generation time for fake data.
+- Enhanced randomness algorithms for better data diversity.
+- Improved profile picture URL quality for better visuals.
