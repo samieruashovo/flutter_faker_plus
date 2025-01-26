@@ -432,16 +432,25 @@ class EcommerceProduct {
   ];
 
   static EcommerceProduct generate() {
+    // Define a static method that generates a random EcommerceProduct instance.
+
     final productData =
         _productData[RandomUtils.randomInt(0, _productData.length - 1)];
+    // Select a random product from the `_productData` list.
+    // `RandomUtils.randomInt(0, _productData.length - 1)` generates a random index within the valid range of the `_productData` list.
 
     final price = RandomUtils.randomDouble(50.0, 2000.0);
+    // Generate a random price between 50.0 and 2000.0 using `RandomUtils.randomDouble`.
 
     return EcommerceProduct(
       name: productData['name'],
+      // Assign the 'name' field of the selected product data to the `name` property of the product.
+
       price: double.parse(price.toStringAsFixed(2)),
+      // Round the random price to two decimal places using `toStringAsFixed(2)` and then parse it back to a double.
+
       category: productData['category'],
-      // imageUrl: productData['image'],
+      // Assign the 'category' field of the selected product data to the `category` property of the product.
     );
   }
 }

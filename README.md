@@ -29,6 +29,56 @@
 
 ---
 
+# Flutter Faker Data Generator Example
+
+This example demonstrates how to generate fake user, product, and location data using the `flutter_faker_plus` library in Flutter.
+
+```dart
+Widget build(BuildContext context) {
+    // Generate fake user, product, and location data using flutter_faker_plus.
+    final user = UserProfile.generate(); // Generate a fake user profile.
+    final product =
+        EcommerceProduct.generate(); // Generate a fake e-commerce product.
+    final location = GeoLocation.generate(); // Generate a fake geo-location.
+
+    return MaterialApp(
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('User Profile:', style: TextStyle(fontSize: 20)),
+
+              Text('Name: ${user.name}'),
+              Text('Email: ${user.email}'),
+              Text('Phone: ${user.phoneNumber}'),
+              Text('Address: ${user.address}'),
+              Text('Date of Birth: ${user.dateOfBirth}'),
+              Text('Gender: ${user.gender}'),
+              Image.network(user.profilePictureUrl),
+              Text('Bio: ${user.bio}'),
+
+              SizedBox(height: 20),
+
+              Text('E-Commerce Product:', style: TextStyle(fontSize: 20)),
+              Text('Product: ${product.name}'),
+              Text('Category: ${product.category}'),
+              Text('Price: \$${product.price}'),
+
+              SizedBox(height: 20),
+
+              Text('Geo-Location:', style: TextStyle(fontSize: 20)),
+              Text('Latitude: ${location.latitude}'),
+              Text('Longitude: ${location.longitude}'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+```
+
 ## 🛠 Installation
 
 Add `flutter_faker_plus` to your `pubspec.yaml` file:
