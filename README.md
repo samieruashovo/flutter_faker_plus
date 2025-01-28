@@ -2,7 +2,8 @@
   <h1>flutter_faker_plus</h1>   
   <p>A comprehensive fake data generator for Flutter/Dart applications.</p>
   
-  ![Screenshot_1738064327](https://github.com/user-attachments/assets/4441c926-0fb6-4de1-8c34-32feb3b23560)
+<img src="https://github.com/user-attachments/assets/4441c926-0fb6-4de1-8c34-32feb3b23560" alt="Mobile Screenshot" width="300" height="600">
+
 </div>
 
 ---
