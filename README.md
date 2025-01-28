@@ -133,6 +133,7 @@ This example demonstrates how to generate fake user, product, and location data 
   }
 ```
 
+
 ## 🛠 Installation
 
 Add `flutter_faker_plus` to your `pubspec.yaml` file:
