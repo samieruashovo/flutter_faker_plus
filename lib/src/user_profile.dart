@@ -1235,6 +1235,26 @@ class UserProfile {
     'Life is what you make of it, so make it amazing.'
   ];
 
+  /// Generates a random user profile with various attributes.
+  ///
+  /// This method generates a random user profile, including:
+  /// - A random first name and last name chosen from predefined lists.
+  /// - A random email address created by combining the first and last names with a domain from a predefined list.
+  /// - A random phone number in the format '+1-XXX-XXX-XXXX'.
+  /// - A random address consisting of a number, a random last name from the predefined list, and "St.".
+  /// - A random date of birth between 1980 and 2005 in the format 'DD/MM/YYYY'.
+  /// - A random gender selected from a predefined list.
+  /// - A random profile picture URL based on gender and a random number.
+  /// - A random bio selected from a predefined list of templates.
+  ///
+  /// Returns a `UserProfile` object with all the generated attributes.
+  ///
+  /// Example:
+  /// ```dart
+  /// UserProfile profile = generate();
+  /// print(profile.name);  // Output: 'John Doe'
+  /// print(profile.email); // Output: 'john.doe@example.com'
+  /// ```
   static UserProfile generate() {
     final firstName =
         _firstNames[RandomUtils.randomInt(0, _firstNames.length - 1)];

@@ -1,6 +1,6 @@
 name: flutter_faker_plus
 description: Generate random fake data for user profiles, e-commerce products, and geolocations etc.
-version: 1.0.0
+version: 1.0.1
 homepage: https://pub.dev/packages/flutter_faker_plus
 repository: https://github.com/samieruashovo/flutter_faker_plus
 issue_tracker: https://github.com/samieruashovo/flutter_faker_plus/issues

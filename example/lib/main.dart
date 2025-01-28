@@ -10,75 +10,93 @@ class FakeDataApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Generate fake user, product, and location data using flutter_faker_plus.
-    final user = UserProfile.generate(); // Generate a fake user profile.
-    final product =
+    final UserProfile user =
+        UserProfile.generate(); // Generate a fake user profile.
+    final EcommerceProduct product =
         EcommerceProduct.generate(); // Generate a fake e-commerce product.
-    final location = GeoLocation.generate(); // Generate a fake geo-location.
+    final GeoLocation location =
+        GeoLocation.generate(); // Generate a fake geo-location.
 
+    final LoremIpsum loremIpsum = LoremIpsum();
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('Fake Data Generator Example'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('User Profile:', style: TextStyle(fontSize: 20)),
-              // Displays a heading for the user profile section.
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('User Profile:', style: TextStyle(fontSize: 20)),
+                // Displays a heading for the user profile section.
 
-              Text('Name: ${user.name}'),
-              // Displays the generated user's name.
+                Text('Name: ${user.name}'),
+                // Displays the generated user's name.
 
-              Text('Email: ${user.email}'),
-              // Displays the generated user's email.
+                Text('Email: ${user.email}'),
+                // Displays the generated user's email.
 
-              Text('Phone: ${user.phoneNumber}'),
-              // Displays the generated user's phone number.
+                Text('Phone: ${user.phoneNumber}'),
+                // Displays the generated user's phone number.
 
-              Text('Address: ${user.address}'),
-              // Displays the generated user's address.
+                Text('Address: ${user.address}'),
+                // Displays the generated user's address.
 
-              Text('Date of Birth: ${user.dateOfBirth}'),
-              // Displays the generated user's date of birth.
+                Text('Date of Birth: ${user.dateOfBirth}'),
+                // Displays the generated user's date of birth.
 
-              Text('Gender: ${user.gender}'),
-              // Displays the generated user's gender.
+                Text('Gender: ${user.gender}'),
+                // Displays the generated user's gender.
 
-              Image.network(user.profilePictureUrl),
-              // Displays the user's profile picture from a network URL.
+                Image.network(user.profilePictureUrl),
+                // Displays the user's profile picture from a network URL.
 
-              Text('Bio: ${user.bio}'),
-              // Displays the generated user's bio.
+                Text('Bio: ${user.bio}'),
+                // Displays the generated user's bio.
 
-              SizedBox(height: 20),
-              // Adds vertical spacing of 20 pixels.
+                SizedBox(height: 20),
+                // Adds vertical spacing of 20 pixels.
 
-              Text('E-Commerce Product:', style: TextStyle(fontSize: 20)),
-              // Displays a heading for the product section.
+                Text('E-Commerce Product:', style: TextStyle(fontSize: 20)),
+                // Displays a heading for the product section.
 
-              Text('Product: ${product.name}'),
-              // Displays the product name.
+                Text('Product: ${product.name}'),
+                // Displays the product name.
 
-              Text('Category: ${product.category}'),
-              // Displays the product category.
+                Text('Category: ${product.category}'),
+                // Displays the product category.
 
-              Text('Price: \$${product.price}'),
-              // Displays the product price prefixed with a dollar sign.
+                Text('Price: \$${product.price}'),
+                // Displays the product price prefixed with a dollar sign.
 
-              SizedBox(height: 20),
-              // Adds vertical spacing of 20 pixels.
+                SizedBox(height: 20),
+                // Adds vertical spacing of 20 pixels.
 
-              Text('Geo-Location:', style: TextStyle(fontSize: 20)),
-              // Displays a heading for the geo-location section.
+                Text('Geo-Location:', style: TextStyle(fontSize: 20)),
+                // Displays a heading for the geo-location section.
 
-              Text('Latitude: ${location.latitude}'),
-              // Displays the generated latitude.
+                Text('Latitude: ${location.latitude}'),
+                // Displays the generated latitude.
 
-              Text('Longitude: ${location.longitude}'),
-              // Displays the generated longitude.
-            ],
+                Text('Longitude: ${location.longitude}'),
+                // Displays the generated longitude.
+
+                SizedBox(height: 20),
+                // Adds vertical spacing of 20 pixels.
+
+                Text('Lorem Ipsum:', style: TextStyle(fontSize: 20)),
+                Text(
+                  loremIpsum.generate(words: 20),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  loremIpsum.generate(
+                      words: 60, paragraphs: 3, showLoremIpsum: true),
+                ),
+              ],
+            ),
           ),
         ),
       ),
