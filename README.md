@@ -139,4 +139,4 @@ This example demonstrates how to generate fake user, product, and location data 
 Add `flutter_faker_plus` to your `pubspec.yaml` file:
 ```yaml
 dependencies:
-  flutter_faker_plus: ^0.0.1
+  flutter_faker_plus: ^1.0.1
